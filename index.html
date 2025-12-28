@@ -22,7 +22,9 @@
     </style>
 </head>
 <body>
-
+<button id="checkout-button">
+  Pay Now
+</button>
     <nav>AJ ROELFSE | AI INSIGHTS</nav>
 
     <div class="hero">
@@ -80,6 +82,16 @@
     <footer>
         &copy; 2026 AJ Roelfse. All rights reserved.
     </footer>
+<script src="https://js.stripe.com/v3/"></script>
 
+<script>
+  const stripe = Stripe("pk_test_YOUR_PUBLIC_KEY");
+
+  document
+    .getElementById("checkout-button")
+    .addEventListener("click", () => {
+      window.location.href = "https://buy.stripe.com/YOUR_PAYMENT_LINK";
+    });
+</script>
 </body>
 </html>
